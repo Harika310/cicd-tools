@@ -1,10 +1,10 @@
 #!/bin/bash
-sudo curl -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-sudo yum install fontconfig java-17-openjdk jenkins -y
-sudo yum install jenkins
-sudo systemctl start jenkins
-sudo systemctl enable jenkins
+ curl -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+ yum install fontconfig java-17-openjdk jenkins -y
+ yum install jenkins
+ systemctl start jenkins
+ systemctl enable jenkins
 
 #resize disk from 20GB to 50GB
 growpart /dev/nvme0n1 4
